@@ -1,0 +1,166 @@
+/* Estilo para o container de produtos */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaço entre os produtos */
+    padding: 20px;
+    justify-content: space-between; /* Alinha os itens com espaço entre eles */
+}
+
+/* Estilo para cada produto */
+.product {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Alinha o botão ao fundo do contêiner */
+    width: calc(50% - 20px); /* 2 produtos por linha */
+}
+
+/* Estilo para a imagem do produto */
+.product img {
+    width: 100%;
+    height: 150px; /* Ajusta a altura da imagem */
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Ajuste para o título do produto */
+.product h3 {
+    font-weight: 700;
+    margin: 10px 0;
+    font-size: 1em; /* Ajuste o tamanho da fonte do título */
+}
+
+/* Preço e subpreço do produto */
+.product .price {
+    font-size: 1.1em;
+    color: #810b5a;
+    margin-bottom: 5px;
+}
+
+/* Subpreço */
+.product .sub-price {
+    font-size: 0.9em;
+    color: #000000;
+    text-decoration: line-through;
+    margin-bottom: 10px;
+}
+
+/* Botão "Comprar" */
+.product .price-button {
+    background-color: hsla(290, 100%, 50%, 0.89);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+    margin-top: auto; /* Alinha o botão ao fundo do contêiner do produto */
+    transition: background-color 0.3s;
+}
+
+.product .price-button:hover {
+    background-color: #000000;
+}
+
+/* Estilos Gerais */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+/* Estilos para o Header */
+header {
+    background-color: #5e05b1;
+    color: #fff;
+    padding: 15px 10px; /* Ajuste o padding para dispositivos móveis */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-wrap: wrap; /* Permite que o conteúdo do cabeçalho se ajuste */
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.5em; /* Ajuste o tamanho da fonte para dispositivos móveis */
+}
+
+.search-bar {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Estilos para o Banner */
+.banner {
+    width: 100%;
+    max-height: 200px; /* Ajuste a altura máxima do banner */
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilos para Categorias e Ofertas */
+.categories, .offers {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Consultas de Mídia para Dispositivos Móveis */
+
+/* Para todos os tamanhos de tela */
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 20px); /* 2 produtos por linha */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: calc(50% - 20px); /* 2 produtos por linha */
+    }
+
+    .banner {
+        max-height: 150px; /* Ajuste para telas muito pequenas */
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    .search-bar input {
+        font-size: 14px;
+    }
+}
+
